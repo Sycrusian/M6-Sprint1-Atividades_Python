@@ -74,36 +74,67 @@ def remove_more_than_two_repetitions(text):
 # Atividade: Exercitando Listas
 
 
+# if __name__ == "__main__":
+#     #1
+#     lista_1 = list(range(6,21))
+#     #2
+#     print(lista_1[-1])
+#     #3
+#     lista_1[1] = 'Kenzie'
+#     print(lista_1)
+#     #4
+#     print(lista_1[2:5])
+#     #5
+#     lista_1.append('Academy')
+#     print(lista_1)
+#     #6
+#     lista_1.remove('Kenzie')
+#     lista_1.remove('Academy')
+#     #7
+#     lista_2 = sorted(lista_1, reverse=True)
+#     print(lista_1)
+#     print(lista_2)
+#     #8
+#     print(len(lista_1))
+#     print(len(lista_2))
+#     #9
+#     lista_1.pop()
+#     lista_2.pop()
+#     print(lista_1)
+#     print(lista_2)
+#     #10
+#     lista_1.clear()
+#     lista_2.clear()
+#     print(lista_1)
+#     print(lista_2)
+
+
+
+# S1-12 | 💪 Atividade: Exercitando Dicionários
+
+
 if __name__ == "__main__":
-    #1
-    lista_1 = list(range(6,21))
-    #2
-    print(lista_1[-1])
-    #3
-    lista_1[1] = 'Kenzie'
-    print(lista_1)
-    #4
-    print(lista_1[2:5])
-    #5
-    lista_1.append('Academy')
-    print(lista_1)
-    #6
-    lista_1.remove('Kenzie')
-    lista_1.remove('Academy')
-    #7
-    lista_2 = sorted(lista_1, reverse=True)
-    print(lista_1)
-    print(lista_2)
-    #8
-    print(len(lista_1))
-    print(len(lista_2))
-    #9
-    lista_1.pop()
-    lista_2.pop()
-    print(lista_1)
-    print(lista_2)
-    #10
-    lista_1.clear()
-    lista_2.clear()
-    print(lista_1)
-    print(lista_2)
+    d1 = {
+        "nome": "Kenzinho",
+        "cidade": "Curitiba",
+        "modulo": "M5"
+    }
+    print(d1)
+    print(d1["nome"])
+    print(d1["cidade"])
+    print(d1.get("modulo"))
+    print(d1.get("telefone", "a chave telefone não existe"))
+    print(d1.keys())
+    print(d1.values())
+    lista_1 = ["telefone", "casado", "idade"]
+    lista_2 = ["999-999-999", False, 28]
+    d2 = dict(zip(lista_1, lista_2))
+    print(d2)
+    d1.update(d2)
+    print(d1)
+    del d1["casado"]
+    print(d1)
+    print(d1.pop("idade"))
+    print(d1)
+    d1.clear()
+    print(d1)
