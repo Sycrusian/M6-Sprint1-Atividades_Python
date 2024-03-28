@@ -1,6 +1,8 @@
 import math
 
 
+# Atividade: Exercitando Funções e Builtins
+
 def delta(a, b, c):
     return (b ** 2) - (4 * a * c)
 
@@ -22,6 +24,10 @@ def bhaskara(a, b, c):
 #     print(bhaskara(3, 10, 2))
 #     # x1=-0.21, x2=-3.12'
 
+
+
+# Atividade: Exercitando Loops e Condicionais
+
 def corresponding_parenthesis(text):
     result = ""
     for i in range(len(text)):
@@ -36,6 +42,7 @@ def corresponding_parenthesis(text):
         result += text[i]
     return result
 
+
 def remove_more_than_two_repetitions(text):
     result = ""
     for i in range(len(text)):
@@ -46,17 +53,57 @@ def remove_more_than_two_repetitions(text):
         result += text[i]
     return result
 
-if __name__ == "__main__":
-    # Exemplo 1
-    result = corresponding_parenthesis("()()")
-    print(result)   # ''
-    # Exemplo 2
-    result = corresponding_parenthesis("()))")
-    print(result)   # '))'
-    # Exemplo 3
-    result = corresponding_parenthesis("()()())()()(()((")
-    print(result)   # ')((('
+
+# if __name__ == "__main__":
+#     # Exemplo 1
+#     result = corresponding_parenthesis("()()")
+#     print(result)   # ''
+#     # Exemplo 2
+#     result = corresponding_parenthesis("()))")
+#     print(result)   # '))'
+#     # Exemplo 3
+#     result = corresponding_parenthesis("()()())()()(()((")
+#     print(result)   # ')((('
     
-    text = "Ollloco meuuuu, taaa peegaando fogoo biiiiichooo"
-    text = remove_more_than_two_repetitions(text)
-    print(text)     # 'Olloco meuu, taa peegaando fogoo biichoo'
+#     text = "Ollloco meuuuu, taaa peegaando fogoo biiiiichooo"
+#     text = remove_more_than_two_repetitions(text)
+#     print(text)     # 'Olloco meuu, taa peegaando fogoo biichoo'
+
+
+
+# Atividade: Exercitando Listas
+
+
+if __name__ == "__main__":
+    #1
+    lista_1 = list(range(6,21))
+    #2
+    print(lista_1[-1])
+    #3
+    lista_1[1] = 'Kenzie'
+    print(lista_1)
+    #4
+    print(lista_1[2:5])
+    #5
+    lista_1.append('Academy')
+    print(lista_1)
+    #6
+    lista_1.remove('Kenzie')
+    lista_1.remove('Academy')
+    #7
+    lista_2 = sorted(lista_1, reverse=True)
+    print(lista_1)
+    print(lista_2)
+    #8
+    print(len(lista_1))
+    print(len(lista_2))
+    #9
+    lista_1.pop()
+    lista_2.pop()
+    print(lista_1)
+    print(lista_2)
+    #10
+    lista_1.clear()
+    lista_2.clear()
+    print(lista_1)
+    print(lista_2)
