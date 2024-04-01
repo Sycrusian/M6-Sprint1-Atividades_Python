@@ -28,6 +28,7 @@ def bhaskara(a, b, c):
 
 # Atividade: Exercitando Loops e Condicionais
 
+
 def corresponding_parenthesis(text):
     result = ""
     for i in range(len(text)):
@@ -163,6 +164,7 @@ def remove_more_than_two_repetitions(text):
 
 # S1-20 | 💪 Atividade: Exercitando args e kwargs
 
+
 def sum_numbers(*args):
     total = 0
     for element in args:
@@ -291,18 +293,62 @@ def list_comprehension_exercise_6(sentence: str):
     return [w for w in sentence.split(" ") if len(w) >= 4 and w[0] == "r"]
 
 
+# if __name__ == "__main__":
+#     # 1
+#     print(list_comprehension_exercise_1())
+#     # 2
+#     print(list_comprehension_exercise_2())
+#     # 3
+#     print(list_comprehension_exercise_3())
+#     # 4
+#     print(list_comprehension_exercise_4())
+#     # 5
+#     sentence = 'O Rato Rui Gosta De QueiJo FresQuiNho'
+#     print(list_comprehension_exercise_5(sentence))
+#     # 6
+#     sentence = 'o rato rui roeu a roupa do rei de roma'
+#     print(list_comprehension_exercise_6(sentence))
+
+
+
+# S1-25 | 💪 Atividade: Exercitando Exceptions
+
+
+def div_by_zero():
+    try:
+        a = 1
+        b = 0
+        return a / b
+    except ZeroDivisionError:
+        print("Não é possível dividir por zero!")
+
+
+def nonexisting_key():
+    try:
+        my_dict = {"name": "Alex", "module": "M5"}
+        return my_dict["address"]
+    except KeyError:
+        print("Chave fornecida não existe no dicionário.")
+
+
+def nonexisting_index():
+    try:
+        my_list = [0, 1]
+        return my_list[5]
+    except IndexError:
+        print("Índice fornecido fora do alcance da lista.")
+
+
+def mysterious_error():
+    try:
+        a = 5
+        return a.capitalize()
+    except AttributeError:
+        print("Não é possível colocar inteiros em maiúsculas.")
+
+
 if __name__ == "__main__":
-    # 1
-    print(list_comprehension_exercise_1())
-    # 2
-    print(list_comprehension_exercise_2())
-    # 3
-    print(list_comprehension_exercise_3())
-    # 4
-    print(list_comprehension_exercise_4())
-    # 5
-    sentence = 'O Rato Rui Gosta De QueiJo FresQuiNho'
-    print(list_comprehension_exercise_5(sentence))
-    # 6
-    sentence = 'o rato rui roeu a roupa do rei de roma'
-    print(list_comprehension_exercise_6(sentence))
+    div_by_zero()
+    nonexisting_key()
+    nonexisting_index()
+    mysterious_error()
