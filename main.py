@@ -223,41 +223,86 @@ def world_cup_logger(country, *args):
     return result
 
 
+# if __name__ == "__main__":
+#     # 1
+#     numbers = [1, 2, 3, 4, 5, 6]
+#     result = sum_numbers(*numbers)
+#     print(result)
+#     # 2
+#     numbers = [1, 2, 3]
+#     multiplier = 2
+#     result = get_multiplied_amount(multiplier, *numbers)
+#     print(result)
+#     # 3
+#     words = ["Tá", "pegando", "fogo", "bicho!!!"]
+#     concatenated_words = word_concatenator(*words)
+#     print(concatenated_words)
+#     # 4
+#     words = ["eae", "amigão", "belezinha?"]
+#     inverted_words = inverted_word_factory(*words)
+#     print(inverted_words)
+#     # 5
+#     user = {"name": "Naruto", "age": 16, "favorite word": "Ichiraku Ramen"}
+#     items = dictionary_separator(**user)
+#     print(type(items))
+#     print(items[0])
+#     print(items[1])
+#     # 6
+#     change_keys = ["username", "password", "address"]
+#     user = {"name": "Williams", "some_key": "1234"}
+#     modified_user = dictionary_creator(*change_keys, **user)
+#     print(modified_user)
+#     # 7
+#     purchase = {"name": "washing powder", "price": 6.7, "quantity": 4}
+#     purchase_log = purchase_logger(**purchase)
+#     print(purchase_log)
+#     # 8
+#     country = 'Alemanha'
+#     year_list = [2014, 1990, 1974, 1954]
+#     log = world_cup_logger(country, *year_list)
+#     print(log)
+
+
+
+# S1-22 | 💪 Atividade: Exercitando List Comprehension
+
+
+def list_comprehension_exercise_1():
+    return [n for n in range(11)]
+
+
+def list_comprehension_exercise_2():
+    return [n for n in range(22) if n % 2 == 0 or n % 3 == 0]
+
+
+def list_comprehension_exercise_3():
+    return [n for n in range(-5, 32) if n % 2 > 0 and n % 5 > 0]
+
+
+def list_comprehension_exercise_4():
+    return [n ** 2 for n in range(11)]
+
+
+def list_comprehension_exercise_5(sentence: str):
+    return [c for c in sentence if c.isupper()]
+
+
+def list_comprehension_exercise_6(sentence: str):
+    return [w for w in sentence.split(" ") if len(w) >= 4 and w[0] == "r"]
+
+
 if __name__ == "__main__":
     # 1
-    numbers = [1, 2, 3, 4, 5, 6]
-    result = sum_numbers(*numbers)
-    print(result)
+    print(list_comprehension_exercise_1())
     # 2
-    numbers = [1, 2, 3]
-    multiplier = 2
-    result = get_multiplied_amount(multiplier, *numbers)
-    print(result)
+    print(list_comprehension_exercise_2())
     # 3
-    words = ["Tá", "pegando", "fogo", "bicho!!!"]
-    concatenated_words = word_concatenator(*words)
-    print(concatenated_words)
+    print(list_comprehension_exercise_3())
     # 4
-    words = ["eae", "amigão", "belezinha?"]
-    inverted_words = inverted_word_factory(*words)
-    print(inverted_words)
+    print(list_comprehension_exercise_4())
     # 5
-    user = {"name": "Naruto", "age": 16, "favorite word": "Ichiraku Ramen"}
-    items = dictionary_separator(**user)
-    print(type(items))
-    print(items[0])
-    print(items[1])
+    sentence = 'O Rato Rui Gosta De QueiJo FresQuiNho'
+    print(list_comprehension_exercise_5(sentence))
     # 6
-    change_keys = ["username", "password", "address"]
-    user = {"name": "Williams", "some_key": "1234"}
-    modified_user = dictionary_creator(*change_keys, **user)
-    print(modified_user)
-    # 7
-    purchase = {"name": "washing powder", "price": 6.7, "quantity": 4}
-    purchase_log = purchase_logger(**purchase)
-    print(purchase_log)
-    # 8
-    country = 'Alemanha'
-    year_list = [2014, 1990, 1974, 1954]
-    log = world_cup_logger(country, *year_list)
-    print(log)
+    sentence = 'o rato rui roeu a roupa do rei de roma'
+    print(list_comprehension_exercise_6(sentence))
