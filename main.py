@@ -144,17 +144,120 @@ def remove_more_than_two_repetitions(text):
 # S1-17 | 💪 Atividade: Exercitando Tuplas
 
 
+# if __name__ == "__main__":
+#     # 1
+#     tupla_1 = ('Valor_1', 2, 3.1, 'Kenzie Academy', ['Elemento1', 'Elemento2'], 'Kenzie Academy')
+#     print(tupla_1)
+#     # 2
+#     print(tupla_1[-1])
+#     # 3
+#     print(len(tupla_1))
+#     # 4
+#     print(tupla_1.count("Kenzie Academy"))
+#     # 5
+#     print(tupla_1.index(3.1))
+#     # 6
+#     tupla_1[-1] = 'Ultimo Elemento'
+
+
+
+# S1-20 | 💪 Atividade: Exercitando args e kwargs
+
+def sum_numbers(*args):
+    total = 0
+    for element in args:
+        total += element
+    return total
+
+
+def get_multiplied_amount(multiplier, *args):
+    for element in args:
+        multiplier *= element
+    return multiplier
+
+
+def word_concatenator(*args):
+    return " ".join(args)
+
+
+def inverted_word_factory(*args):
+    lst = list(args)[::-1]
+    for i in range(len(lst) - 1):
+        lst[i] = "".join(reversed(lst[i]))
+    return word_concatenator(*lst)
+
+
+def dictionary_separator(**kwargs):
+    keys = list(kwargs.keys())
+    values = list(kwargs.values())
+    return (keys, values)
+
+
+def dictionary_creator(*args, **kwargs):
+    if len(args) < len(kwargs):
+        return None
+    values = list(kwargs.values())
+    dict = {}
+    for i in range(len(args) - 1):
+        dict[args[i]] = values[i]
+    return dict
+
+
+def purchase_logger(**kwargs):
+    result = str(kwargs.get("quantity"))
+    result += " " + str(kwargs.get("name"))
+    result += " bought by "
+    result += str(kwargs.get("price"))
+    return result
+
+
+def world_cup_logger(country, *args):
+    result = country + " - "
+    if (len(args) == 1):
+        result += str(args[0])
+        return result
+    lst = sorted(args)
+    final = lst.pop()
+    result += ", ".join(map(str, lst))
+    result += " e " + str(final)
+    return result
+
+
 if __name__ == "__main__":
     # 1
-    tupla_1 = ('Valor_1', 2, 3.1, 'Kenzie Academy', ['Elemento1', 'Elemento2'], 'Kenzie Academy')
-    print(tupla_1)
+    numbers = [1, 2, 3, 4, 5, 6]
+    result = sum_numbers(*numbers)
+    print(result)
     # 2
-    print(tupla_1[-1])
+    numbers = [1, 2, 3]
+    multiplier = 2
+    result = get_multiplied_amount(multiplier, *numbers)
+    print(result)
     # 3
-    print(len(tupla_1))
+    words = ["Tá", "pegando", "fogo", "bicho!!!"]
+    concatenated_words = word_concatenator(*words)
+    print(concatenated_words)
     # 4
-    print(tupla_1.count("Kenzie Academy"))
+    words = ["eae", "amigão", "belezinha?"]
+    inverted_words = inverted_word_factory(*words)
+    print(inverted_words)
     # 5
-    print(tupla_1.index(3.1))
+    user = {"name": "Naruto", "age": 16, "favorite word": "Ichiraku Ramen"}
+    items = dictionary_separator(**user)
+    print(type(items))
+    print(items[0])
+    print(items[1])
     # 6
-    tupla_1[-1] = 'Ultimo Elemento'
+    change_keys = ["username", "password", "address"]
+    user = {"name": "Williams", "some_key": "1234"}
+    modified_user = dictionary_creator(*change_keys, **user)
+    print(modified_user)
+    # 7
+    purchase = {"name": "washing powder", "price": 6.7, "quantity": 4}
+    purchase_log = purchase_logger(**purchase)
+    print(purchase_log)
+    # 8
+    country = 'Alemanha'
+    year_list = [2014, 1990, 1974, 1954]
+    log = world_cup_logger(country, *year_list)
+    print(log)
