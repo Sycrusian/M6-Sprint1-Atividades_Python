@@ -113,28 +113,48 @@ def remove_more_than_two_repetitions(text):
 # S1-12 | 💪 Atividade: Exercitando Dicionários
 
 
+# if __name__ == "__main__":
+#     d1 = {
+#         "nome": "Kenzinho",
+#         "cidade": "Curitiba",
+#         "modulo": "M5"
+#     }
+#     print(d1)
+#     print(d1["nome"])
+#     print(d1["cidade"])
+#     print(d1.get("modulo"))
+#     print(d1.get("telefone", "a chave telefone não existe"))
+#     print(d1.keys())
+#     print(d1.values())
+#     lista_1 = ["telefone", "casado", "idade"]
+#     lista_2 = ["999-999-999", False, 28]
+#     d2 = dict(zip(lista_1, lista_2))
+#     print(d2)
+#     d1.update(d2)
+#     print(d1)
+#     del d1["casado"]
+#     print(d1)
+#     print(d1.pop("idade"))
+#     print(d1)
+#     d1.clear()
+#     print(d1)
+
+
+
+# S1-17 | 💪 Atividade: Exercitando Tuplas
+
+
 if __name__ == "__main__":
-    d1 = {
-        "nome": "Kenzinho",
-        "cidade": "Curitiba",
-        "modulo": "M5"
-    }
-    print(d1)
-    print(d1["nome"])
-    print(d1["cidade"])
-    print(d1.get("modulo"))
-    print(d1.get("telefone", "a chave telefone não existe"))
-    print(d1.keys())
-    print(d1.values())
-    lista_1 = ["telefone", "casado", "idade"]
-    lista_2 = ["999-999-999", False, 28]
-    d2 = dict(zip(lista_1, lista_2))
-    print(d2)
-    d1.update(d2)
-    print(d1)
-    del d1["casado"]
-    print(d1)
-    print(d1.pop("idade"))
-    print(d1)
-    d1.clear()
-    print(d1)
+    # 1
+    tupla_1 = ('Valor_1', 2, 3.1, 'Kenzie Academy', ['Elemento1', 'Elemento2'], 'Kenzie Academy')
+    print(tupla_1)
+    # 2
+    print(tupla_1[-1])
+    # 3
+    print(len(tupla_1))
+    # 4
+    print(tupla_1.count("Kenzie Academy"))
+    # 5
+    print(tupla_1.index(3.1))
+    # 6
+    tupla_1[-1] = 'Ultimo Elemento'
