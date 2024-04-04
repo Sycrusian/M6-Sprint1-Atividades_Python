@@ -347,8 +347,28 @@ def mysterious_error():
         print("Não é possível colocar inteiros em maiúsculas.")
 
 
+# if __name__ == "__main__":
+#     div_by_zero()
+#     nonexisting_key()
+#     nonexisting_index()
+#     mysterious_error()
+
+
+
+# S1-29 | 💪 Atividade: Conjuntos
+
 if __name__ == "__main__":
-    div_by_zero()
-    nonexisting_key()
-    nonexisting_index()
-    mysterious_error()
+    # 1
+    conjunto_1 = set([1, 1, 'Kenzie', 'Academy', 'Kenzie', 10])
+    print(conjunto_1)
+    # 2
+    print(len(conjunto_1))
+    # 3
+    conjunto_1.add('Novo Elemento')
+    print(conjunto_1)
+    # 4
+    conjunto_1.discard('Novo Elemento')
+    print(conjunto_1)
+    # 5
+    conjunto_1.clear()
+    print(conjunto_1)
